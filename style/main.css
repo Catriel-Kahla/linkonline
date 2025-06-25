@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-main {
+    position: fixed;
+    top: 1dvh; /* asegura que esté pegada al tope */
+    left: 50%; /* centrado respecto a la ventana */
+    transform: translateX(-50%); /* corrige la posición para centrar bien */
+    
+    /*background-color: #075EFF0D;*/
+
+    background: #3737B3;
+    background: linear-gradient(304deg, rgba(55, 55, 179, 1) 0%, rgba(44, 175, 219, 1) 50%, rgba(55, 55, 179, 1) 100%);
+    color: rgb(0, 0, 0);
+    width: 92dvw;
+    height: 6dvh;
+    padding: 0 2dvw;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-style: solid;
+    border-color: #6783b80d;
+}
+
+.nav-links a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 2dvw;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+
+.max-windows-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.mainIndex{
+    background: #3737B3;
+    background: linear-gradient(304deg, rgba(55, 55, 179, 0.300) 0%, rgba(44, 175, 219, 0.300) 50%, rgba(55, 55, 179, 0.300) 100%);
+    color: rgb(0, 0, 0);
+    margin: 0 auto 20dvh auto;
+    width: 30dvw;
+    height: auto;
+    padding: 2dvw;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: column;
+
+    border-style: solid;
+    border-color: #6783b80d;
+}
+
+.mainIndex input {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1dvh 1dvw;
+    margin-top: 3dvh;
+    border-radius: 3px;
+}
+
+.mainIndex p {
+    color: rgb(93, 0, 0);
+    margin-top: 2dvh;
+}
+
+.main {
+    /*background-color: #075EFF0D;*/
+    background: #3737B3;
+    background: linear-gradient(304deg, rgba(55, 55, 179, 0.7) 0%, rgba(44, 175, 219, 0.7) 50%, rgba(55, 55, 179, 0.7) 100%);
+    color: rgb(0, 0, 0);
+    margin: 10dvh auto 0 auto;
+    width: 92dvw;
+    height: 50dvh;
+    padding: 0 2dvw;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    border-style: solid;
+    border-color: #6783b80d;
+}

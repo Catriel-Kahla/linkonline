@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="582" height="90" viewBox="0 0 582 90">
+  <style>
+    .text {
+      font-family: 'Didot', 'Playfair Display', serif;
+      font-size: 120px;
+      fill: black;
+    }
+    .mask-line {
+      fill: white;
+    }
+  </style>
+
+  <!-- Fondo transparente -->
+  <rect width="100%" height="100%" fill="transparent"/>
+
+  <!-- Definir máscara -->
+  <mask id="cut-lines">
+    <rect width="100%" height="100%" fill="white"/>
+    <!-- Dos rectángulos que “borran” parte del texto -->
+    <rect x="0" y="43" width="100%" height="4" fill="black"/>
+    <rect x="0" y="57" width="100%" height="4" fill="black"/>
+  </mask>
+
+  <!-- Texto con la máscara aplicada -->
+  <text x="0" y="85" class="text" mask="url(#cut-lines)">Link Online</text>
+</svg>
