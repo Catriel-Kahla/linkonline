@@ -8,24 +8,32 @@
 </head>
 <body class="body">
     <nav class="nav-main">
-        <div class="nav-links">
-            <a href="#">INICIO</a>
-        </div>
         <div>
-            <img src="/src/LinkOnline_Logo.svg" alt="Link Online" height="30dvh">
+            <a href="#"><img src="/src/LinkOnline_Logo.svg" alt="Link Online" height="23dvh"></a>
         </div>
 
         <div id="userText">PERFIL: Kahla Catriel <BR>BIENVENIDO: Sistemas</div>
     </nav>
 
     <main class="main">
-        <h2><u>Servicios Digitales</u></h2>
+        <h2 class="mt-1"><u>Servicios Digitales</u></h2>
+        <div class="dashboard">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
     </main>
 
     <script>
         if(sessionStorage.getItem("user")!=undefined){
             let session = sessionStorage.getItem("user");
-            document.getElementById("userText").innerHTML="PERFIL: " + session;
+            document.getElementById("userText").innerHTML= "Perfil: " + session;
         }else{
             window.location.href = "/index.html"
         }
