@@ -1,0 +1,124 @@
+.background {
+    background-color: #000000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background.bg-transition {
+    animation: bgToWhiteAndBack 3s forwards;
+}
+
+.splash-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-image {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.splash-image-1 {
+    animation: zoomInEffect 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.splash-image-2 {
+    animation: fadeInTransition 1.83s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+/* Animación de zoom estilo Netflix */
+@keyframes zoomInEffect {
+    0% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animación de transición a la segunda imagen */
+@keyframes fadeInTransition {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animación de desvanecimiento final */
+@keyframes fadeOutSplash {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animación del fondo: negro -> blanco -> negro */
+@keyframes bgToWhiteAndBack {
+    0% {
+        background-color: #000000;
+    }
+    33% {
+        background-color: #ffffff;
+    }
+    66% {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: #000000;
+    }
+}
+
+
+
+/* Navbar */
+.navbar {
+    display: none;
+}
+
+.navbar.show {
+    display: flex;
+    animation: slideDown 0.5s ease-out forwards;
+}
+
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenido principal */
+.main-content {
+    display: none;
+    padding-top: 80px;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-content.show {
+    display: block;
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../src/icon.svg">
+    <link rel="stylesheet" href="../style/transitions.css">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <title>Marketing - Link Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #d9d9d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 2rem;
+            padding-top: 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #4665c6;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #a0a0a0;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .hero-section h2 {
+            font-size: 2rem;
+            color: #d9d9d9;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(70, 101, 198, 0.1), rgba(0, 0, 0, 0.3));
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(70, 101, 198, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(70, 101, 198, 0.4);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #4665c6;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+            color: #b0b0b0;
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem;
+            background-color: rgba(70, 101, 198, 0.05);
+            border-radius: 10px;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            color: #4665c6;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #d9d9d9;
+            font-size: 1.1rem;
+        }
+
+        .process-section {
+            margin: 4rem 0;
+        }
+
+        .process-section h2 {
+            text-align: center;
+            color: #4665c6;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: #4665c6;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            color: #d9d9d9;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: #a0a0a0;
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(70, 101, 198, 0.2), rgba(0, 0, 0, 0.5));
+            border-radius: 10px;
+            border: 1px solid rgba(70, 101, 198, 0.3);
+        }
+
+        .cta-section h2 {
+            color: #4665c6;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #d9d9d9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #4665c6;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #3654b5;
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            color: #4665c6;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #d9d9d9;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-logo">
+            <img src="../src/LK_white.svg" alt="Link Online Logo">
+        </a>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="developer.html">Developer</a></li>
+            <li><a href="marketing.html">Marketing</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Marketing Services</h1>
+        <p class="subtitle">Grow your business with strategic digital marketing</p>
+
+        <div class="hero-section">
+            <h2>Transform Your Brand's Digital Presence</h2>
+            <p>We create data-driven marketing strategies that connect with your audience and drive measurable results.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Social Media Marketing</h3>
+                <p>Build and engage your community across all major social platforms with compelling content and strategic campaigns.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>SEO Optimization</h3>
+                <p>Improve your search engine rankings and increase organic traffic with comprehensive SEO strategies.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📧</div>
+                <h3>Email Marketing</h3>
+                <p>Create targeted email campaigns that convert subscribers into loyal customers with personalized messaging.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Analytics & Insights</h3>
+                <p>Make informed decisions with detailed analytics and actionable insights about your marketing performance.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✏️</div>
+                <h3>Content Marketing</h3>
+                <p>Engage your audience with high-quality content that tells your brand story and establishes authority.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💰</div>
+                <h3>PPC Advertising</h3>
+                <p>Maximize ROI with targeted paid advertising campaigns across Google, Facebook, and other platforms.</p>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Campaigns Launched</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2.5M+</div>
+                <div class="stat-label">Reach Generated</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">180%</div>
+                <div class="stat-label">Avg. ROI Increase</div>
+            </div>
+        </div>
+
+        <div class="process-section">
+            <h2>Our Marketing Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Research & Analysis</h3>
+                    <p>We analyze your market, competitors, and target audience to create a solid foundation.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Strategy Development</h3>
+                    <p>Custom marketing strategies tailored to your business goals and budget.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Implementation</h3>
+                    <p>Execute campaigns across multiple channels with precision and creativity.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Optimization</h3>
+                    <p>Continuous monitoring and optimization to maximize results and ROI.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Boost Your Marketing?</h2>
+            <p>Let's create a custom marketing strategy that drives real results for your business</p>
+            <a href="contact.html" class="cta-button">Start Your Campaign</a>
+        </div>
+    </div>
+
+    <script src="../scripts/transitions.js"></script>
+</body>
+</html>

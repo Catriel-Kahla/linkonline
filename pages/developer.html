@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../src/icon.svg">
+    <link rel="stylesheet" href="../style/transitions.css">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <title>Developer - Link Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #d9d9d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 2rem;
+            padding-top: 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #4665c6;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #a0a0a0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(70, 101, 198, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(70, 101, 198, 0.3);
+        }
+
+        .service-card h3 {
+            color: #4665c6;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+            color: #b0b0b0;
+        }
+
+        .service-card ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .service-card li {
+            margin: 0.5rem 0;
+            color: #d9d9d9;
+        }
+
+        .tech-stack {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .tech-stack h2 {
+            color: #4665c6;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .tech-tag {
+            background-color: rgba(70, 101, 198, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #4665c6;
+            color: #d9d9d9;
+            font-weight: 500;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            color: #4665c6;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #d9d9d9;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem;
+            background-color: rgba(70, 101, 198, 0.1);
+            border-radius: 10px;
+        }
+
+        .cta-section h2 {
+            color: #4665c6;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 1rem 2.5rem;
+            background-color: #4665c6;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #3654b5;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-logo">
+            <img src="../src/LK_white.svg" alt="Link Online Logo">
+        </a>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="developer.html">Developer</a></li>
+            <li><a href="marketing.html">Marketing</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Developer Services</h1>
+        <p class="subtitle">Building robust and scalable solutions</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Custom web applications tailored to your business needs.</p>
+                <ul>
+                    <li>Responsive Design</li>
+                    <li>Full-Stack Development</li>
+                    <li>RESTful APIs</li>
+                    <li>Database Design</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Mobile Development</h3>
+                <p>Native and cross-platform mobile applications.</p>
+                <ul>
+                    <li>iOS Development</li>
+                    <li>Android Development</li>
+                    <li>React Native</li>
+                    <li>Flutter</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Cloud Solutions</h3>
+                <p>Scalable cloud infrastructure and deployment.</p>
+                <ul>
+                    <li>AWS Services</li>
+                    <li>Azure Cloud</li>
+                    <li>DevOps & CI/CD</li>
+                    <li>Microservices</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>E-Commerce</h3>
+                <p>Complete e-commerce solutions for your business.</p>
+                <ul>
+                    <li>Shopping Cart Systems</li>
+                    <li>Payment Integration</li>
+                    <li>Inventory Management</li>
+                    <li>Analytics & Reporting</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>UI/UX Design</h3>
+                <p>Beautiful and intuitive user interfaces.</p>
+                <ul>
+                    <li>User Research</li>
+                    <li>Wireframing</li>
+                    <li>Prototyping</li>
+                    <li>Visual Design</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Maintenance & Support</h3>
+                <p>Ongoing support for your applications.</p>
+                <ul>
+                    <li>Bug Fixes</li>
+                    <li>Performance Optimization</li>
+                    <li>Security Updates</li>
+                    <li>Feature Enhancements</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2>Technologies We Use</h2>
+            <div class="tech-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Git</span>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can bring your ideas to life</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+        </div>
+    </div>
+
+    <script src="../scripts/transitions.js"></script>
+</body>
+</html>

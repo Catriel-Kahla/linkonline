@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../src/icon.svg">
+    <link rel="stylesheet" href="../style/transitions.css" />
+    <link rel="stylesheet" href="../style/navbar.css" />
+    <title>Contact - Link Online</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #000000;
+        color: #d9d9d9;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        padding: 2rem;
+        padding-top: 100px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: #4665c6;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        color: #a0a0a0;
+      }
+
+      .contact-form {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(70, 101, 198, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #d9d9d9;
+        font-weight: 500;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.8rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(70, 101, 198, 0.3);
+        border-radius: 5px;
+        color: #d9d9d9;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #4665c6;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      button {
+        width: 100%;
+        padding: 1rem;
+        background-color: #4665c6;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #3654b5;
+        transform: translateY(-2px);
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: #4665c6;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .back-link:hover {
+        color: #d9d9d9;
+      }
+
+      .contact-info {
+        margin-top: 3rem;
+        text-align: center;
+      }
+
+      .contact-info p {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+      }
+
+      .contact-info a {
+        color: #4665c6;
+        text-decoration: none;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../index.html" class="navbar-logo">
+        <img src="../src/LK_white.svg" alt="Link Online Logo">
+      </a>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="developer.html">Developer</a></li>
+        <li><a href="marketing.html">Marketing</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p class="subtitle">We'd love to hear from you</p>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p>
+          Email:
+          <a href="mailto:contact@linkonline.com.ar"
+            >contact@linkonline.com.ar</a
+          >
+        </p>
+        <p>Phone: <a href="tel:+5493413820859">+54 9 341 382-0859</a></p>
+      </div>
+    </div>
+
+    <script src="../scripts/transitions.js"></script>
+  </body>
+</html>
